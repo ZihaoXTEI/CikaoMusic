@@ -1,0 +1,15 @@
+<!-- 标题栏组件 -->
+<view class="header">
+  <view class="title">{{title}}</view>
+  <!-- 右侧区域 -->
+  <view class="right" wx:if="{{showRight}}" bindtap="handleRightClick">
+    <view class="slot">
+      <slot></slot>
+    </view>
+    <!-- 默认内容 -->
+    <view class="default">
+      <text>{{rightText}}</text>
+      <image class="icon" src="/assets/images/icons/arrow-right.png"></image>
+    </view>
+  </view>
+</view>
