@@ -1,6 +1,6 @@
 const BASE_URL = "http://123.207.32.32:9001"
 
-class HYRequest {
+class MyRequest {
   request(url, method, params) {
     return new Promise((resolve, reject) => {
       wx.request({
@@ -24,6 +24,6 @@ class HYRequest {
   }
 }
 
-const hyRequest = new HYRequest()
+const myRequest = new MyRequest()
 
-export default hyRequest
+export default myRequest
