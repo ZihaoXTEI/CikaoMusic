@@ -5,7 +5,7 @@ App({
     screenHeight: 0,
     statusBarHeight: 0,
     navBarHeight: 44,
-    deviceRadio: 0
+    deviceRatio: 0  // 屏幕比例
   },
 
   onLaunch() {
@@ -15,7 +15,7 @@ App({
     this.globalData.screenHeight = systemInfo.screenHeight
     this.globalData.statusBarHeight = systemInfo.statusBarHeight
 
-    const deviceRadio = systemInfo.screenHeight / systemInfo.screenWidth
-    this.globalData.deviceRadio = deviceRadio
+    const deviceRatio = systemInfo.screenHeight / systemInfo.screenWidth
+    this.globalData.deviceRatio = deviceRatio
   }
 })
