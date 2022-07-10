@@ -9,7 +9,7 @@
   display: inline-block;
   vertical-align: top;
   width: 220rpx;
-  margin-top: 20rpx;
+  margin-left: 20rpx;
 }
 
 .menu-list .menu-item:last-of-type {

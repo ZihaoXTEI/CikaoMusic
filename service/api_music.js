@@ -17,7 +17,7 @@ export function getBanners(type = 2) {
  * @param {number} idx 榜单类型 可选：0-飙升 1-热门 2-新歌 3-原创
  */
 export function getRankings(idx) {
-  return myRequset.get('/top/list', {
+  return myRequest.get("/top/list", {
     idx
   })
 }

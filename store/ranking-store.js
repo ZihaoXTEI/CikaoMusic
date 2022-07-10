@@ -12,9 +12,10 @@ const rankingStore = new HYEventStore({
   },
   actions: {
     getRankingDataAction(ctx) {
-      for (let i = 0; i < rankingMap.length; i++) {
+      for (let i = 0; i < 4; i++) {
         getRankings(i).then(res => {
           const rankingName = rankingMap[i]
+          console.log(res.playlist)
           ctx[rankingName] = res.playlist
         })
       }

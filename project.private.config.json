@@ -9,8 +9,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "home_video",
-          "pathName": "pages/home-video/index",
+          "name": "home_music",
+          "pathName": "pages/home-music/index",
           "query": "",
           "launchMode": "default",
           "scene": null
