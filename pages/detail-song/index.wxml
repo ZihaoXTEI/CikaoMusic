@@ -11,6 +11,6 @@
 <!-- 歌单列表 -->
 <view class="song-list">
   <block wx:for="{{songInfo.tracks}}" wx:key="id">
-    <song-item-v2 item="{{item}}" index="{{index+1}}" bindtap="handleSongItemTap"></song-item-v2>
+    <song-item-detail item="{{item}}" index="{{index+1}}" bindtap="handleSongItemTap"></song-item-detail>
   </block>
 </view>

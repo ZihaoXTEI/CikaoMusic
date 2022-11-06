@@ -1,4 +1,3 @@
-
 <!-- 音乐主页 -->
 
 <!-- 搜索框 -->
@@ -19,8 +18,8 @@
   <area-header title="推荐歌曲" bind:moretap="handleRecommendMoreTap"></area-header>
   <view class="song-list">
     <block wx:for="{{recommendSongMenu}}" wx:key="id">
-      <song-item-v1 item="{{item}}" bindtap="handleRecommendItemTap" data-item="{{item}}" data-index="{{index}}">
-      </song-item-v1>
+      <song-item-plain item="{{item}}" bindtap="handleRecommendItemTap" data-item="{{item}}" data-index="{{index}}">
+      </song-item-plain>
     </block>
   </view>
 </view>

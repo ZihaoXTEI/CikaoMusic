@@ -33,7 +33,7 @@
 	<view class="title">最佳匹配</view>
 	<view class="result-list">
 		<block wx:for="{{resultSongList}}" wx:key="id">
-			<song-item-v2 item="{{item}}" index="{{index+1}}"></song-item-v2>
+			<song-item-detail item="{{item}}" index="{{index+1}}"></song-item-detail>
 		</block>
 	</view>
 </view>

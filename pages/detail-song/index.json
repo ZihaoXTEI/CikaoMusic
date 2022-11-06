@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "song-item-v2": "/components/song-item-v2/index",
+    "song-item-detail": "/components/song-item-detail/index",
     "song-menu-header": "/components/song-menu-header/index"
   }
 }
