@@ -1,15 +1,15 @@
-<!-- 水平滚动歌单插件 -->
-<area-header title='{{title}}'></area-header>
+<!-- 水平滚动歌单组件 -->
+<view class="song-menu-area" wx:if="{{songMenu.length}}">
 
-<scroll-view scroll-x class='menu-list'>
-  <block wx:for='{{songMenu}}' wx:key='id'>
-    <view class='menu-item'>
-      <song-menu-item
-        item='{{item}}'
-        bindtap='handleMenuItemClick'
-        data-item='{{item}}'
-      ></song-menu-item>
-    </view>
-  </block>
-</scroll-view>
+  <!-- 标题 -->
+  <area-header title="{{title}}" bind:moretap="handleMenuMoreTap"></area-header>
 
+  <scroll-view class="menu-list" scroll-x enable-flex style="width: {{screenWidth}}px;">
+    <!-- 歌单封面及名称 -->
+    <block wx:for="{{songMenu}}" wx:key="id">
+      <view class="menu-item">
+        <song-menu-item item="{{item}}"></song-menu-item>
+      </view>
+    </block>
+  </scroll-view>
+</view>

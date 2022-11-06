@@ -1,0 +1,18 @@
+<!-- 所有歌单页面 -->
+
+<view class="detail-menu">
+	<block wx:for="{{songMenus}}" wx:key="cat">
+		<view class="cat">
+    <!-- 分类名称 -->
+			<area-header title="{{item.cat}}" showRight="{{false}}"></area-header>
+      <!-- 歌单列表 -->
+			<view class="list">
+				<block wx:for="{{item.playlists}}" wx:key="id" wx:for-item="song">
+					<view class="item">
+						<song-menu-item item="{{song}}"></song-menu-item>
+					</view>
+				</block>
+			</view>
+		</view>
+	</block>
+</view>

@@ -4,11 +4,13 @@
   margin: 36rpx 0 10rpx;
 }
 
+/* 歌曲序号 */
 .song-item .index {
   font-size: 30rpx;
   padding: 12rpx;
 }
 
+/* 歌曲信息 */
 .song-item .info {
   flex: 1;
   margin-left: 16rpx;

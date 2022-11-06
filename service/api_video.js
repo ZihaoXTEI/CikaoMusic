@@ -6,7 +6,7 @@ import myRequest from './index'
  * @param {number} offset 取出数量
  * @param {number} limit 偏移数量
  */
-export function getTopMV(offset, limit = 10) {
+export function getTopMV(offset = 0, limit = 10) {
   return myRequest.get('/top/mv', {
     offset,
     limit
@@ -29,8 +29,8 @@ export function getMVURL(id) {
  * @function getMVDetail
  * @param {number} mvid MV的编号
  */
-export function getMVDetail(mvid){
-  return myRequest.get('/mv/detail',{
+export function getMVDetail(mvid) {
+  return myRequest.get('/mv/detail', {
     mvid
   })
 }
@@ -40,8 +40,8 @@ export function getMVDetail(mvid){
  * @function getRelatedVideo
  * @param {number} id MV的编号
  */
-export function getRelatedVideo(id){
-  return myRequest.get('/related/allvideo',{
+export function getRelatedVideo(id) {
+  return myRequest.get('/related/allvideo', {
     id
   })
 }

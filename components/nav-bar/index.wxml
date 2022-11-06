@@ -1,0 +1,26 @@
+<view class="status" style="height: {{statusBarHeight}}px;"></view>
+
+<view class="nav-bar">
+  <!-- 左侧 -->
+  <view class="left" bindtap="handleLeftTap">
+    <view class="slot">
+      <slot name="left"></slot>
+    </view>
+    <!-- 默认内容：返回按钮 -->
+    <view class="default">
+      <van-icon class="icon" name="arrow-left"></van-icon>
+    </view>
+  </view>
+
+  <view class="center">
+    <view class="slot">
+      <slot name="center"></slot>
+    </view>
+    <!-- 默认内容 -->
+    <view class="default">
+      <view class="title">{{title}}</view>
+    </view>
+  </view>
+
+  <view class="right"></view>
+</view>

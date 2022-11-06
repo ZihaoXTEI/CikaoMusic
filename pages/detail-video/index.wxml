@@ -1,8 +1,20 @@
-<!--pages/detail-video/index.wxml-->
-<video class="video" 
-       src="{{mvURLInfo.url}}"
-       autoplay
-       loop>
+<!-- MV详情页面 -->
+
+<!-- MV视频 -->
+<video class="video" src="{{mvURLInfo.url}}" autoplay loop>
 </video>
 
-<view>xxxxx</view>
+<!-- MV视频标题 -->
+<view class="video-title">{{mvDetail.artistName}}-{{mvDetail.name}}</view>
+
+<!-- 推荐内容 -->
+<scroll-view class="content" scroll-y>
+  <view class="related-video">
+    <block wx:for="{{relatedVideos}}" wx:key="id">
+      <view class="item">
+        <image class="img" src="{{item.coverUrl}}" mode="widthFix"></image>
+        <view class="title">{{item.title}}</view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

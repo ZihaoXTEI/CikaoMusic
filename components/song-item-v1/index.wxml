@@ -1,2 +1,15 @@
-<!--components/song-item-v1/index.wxml-->
-<text>components/song-item-v1/index.wxml</text>
+<view class="song-item" bindtap="handleSongItemTap">
+  <!-- 歌曲封面 -->
+  <image class="image" src="{{item.al.picUrl}}"></image>
+
+  <!-- 歌曲信息 -->
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="source">{{item.ar[0].name}}</view>
+  </view>
+
+  <!-- 右侧箭头 -->
+  <view class="arrow">
+    <van-icon name="arrow" color="#999" size="16px" />
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<!-- 歌单详情页面 -->
+
+<!-- 专辑封面及信息 -->
+<view class="header" wx:if="{{type === 'menu' && songInfo.name}}">
+  <song-menu-header songInfo="{{songInfo}}"></song-menu-header>
+</view>
+
+<!-- 标题 -->
+<view class="title" wx:else>{{songInfo.name}}</view>
+
+<!-- 歌单列表 -->
+<view class="song-list">
+  <block wx:for="{{songInfo.tracks}}" wx:key="id">
+    <song-item-v2 item="{{item}}" index="{{index+1}}" bindtap="handleSongItemTap"></song-item-v2>
+  </block>
+</view>

@@ -1,20 +1,12 @@
-// pages/detail-video/index.js
 import { getMVURL, getMVDetail, getRelatedVideo } from '../../service/api_video'
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    mvURLInfo: {},
-    mvDetail: {},
-    relatedVideos: []
+    mvURLInfo: {},  // MV的URL
+    mvDetail: {}, //  MV的详情信息
+    relatedVideos: [] // MV对应推荐信息
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
     const id = options.id
     this.getPageData(id)

@@ -1,4 +1,4 @@
-const BASE_URL = "http://123.207.32.32:9001"
+const BASE_URL = "http://123.207.32.32:9002"
 
 class MyRequest {
   request(url, method, params) {

@@ -1,99 +1,100 @@
-.header {
-  width: 100vw;
+/* 背景 */
+.content {
   position: relative;
-  left: -20rpx;
   display: flex;
   flex-direction: column;
   height: 450rpx;
   color: #fff;
 }
 
-.header .bg-image {
+.content .bg-image {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
-.header .bg-image .bg-cover {
+.content .bg-cover {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
   backdrop-filter: blur(5px);
+  z-index: -1;
 }
 
-.content {
+/* 专辑 */
+.album {
   display: flex;
   margin-top: 60rpx;
   padding: 0 50rpx;
 }
 
-.content .image {
+.album .image {
   width: 220rpx;
   height: 220rpx;
   border-radius: 16rpx;
 }
 
-.content .info {
+.album .info {
   position: relative;
   height: 220rpx;
   flex: 1;
   margin-left: 50rpx;
 }
 
-.content .info .author {
+.album .author {
   margin-top: 20rpx;
   display: flex;
   align-items: center;
 }
 
-.content .info .author .avatar {
+.album .author .avater {
   width: 50rpx;
   height: 50rpx;
   border-radius: 25rpx;
 }
 
-.content .info .author .nickname {
+.album .author .nickname {
   font-size: 24rpx;
   margin-left: 18rpx;
 }
 
-.content .info .desc {
+.album .desc {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   margin-top: 30rpx;
-  font-size: 24rpx;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 24rpx;
 }
 
-.content .operation {
+/* 操作 */
+.operation {
   display: flex;
   justify-content: space-around;
-  padding: 30rpx;
   margin-top: 30rpx;
+  padding: 30rpx;
 }
 
-.content .operation .item {
+.operation .item {
   display: flex;
-  align-items: 10rpx;
+  align-items: center;
 }
 
-.content .operation .item .icon {
+.operation .item .icon {
   width: 48rpx;
   margin-right: 10rpx;
 }
 
-.content .operation .item .text {
+.operation .item .text {
   font-size: 28rpx;
 }

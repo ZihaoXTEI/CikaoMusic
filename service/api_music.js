@@ -1,3 +1,4 @@
+import myRequest from './index'
 import myRequset from './index'
 
 /**
@@ -5,7 +6,7 @@ import myRequset from './index'
  * @function getBanners
  * @param {number} type 资源类型 可选：0-PC 1-Android 2-iPhone 3-iPad
  */
-export function getBanners(type = 2) {
+export function getMusicBannerList(type = 0) {
   return myRequset.get('/banner', {
     type
   })
@@ -16,8 +17,8 @@ export function getBanners(type = 2) {
  * @function getRankings
  * @param {number} idx 榜单类型 可选：0-飙升 1-热门 2-新歌 3-原创
  */
-export function getRankings(idx) {
-  return myRequest.get("/top/list", {
+export function getRankingList(idx) {
+  return myRequest.get('/top/playlist', {
     idx
   })
 }
@@ -29,8 +30,8 @@ export function getRankings(idx) {
  * @param {number} limit 取出歌曲数量
  * @param {number} offset 偏移数量
  */
-export function getSongMenu(cat = '全部', limit = 6, offset = 0){
-  return myRequset.get('/top/playlist',{
+export function getSongMenuList(cat = '全部', limit = 6, offset = 0) {
+  return myRequset.get('/top/playlist', {
     cat,
     limit,
     offset
@@ -42,8 +43,12 @@ export function getSongMenu(cat = '全部', limit = 6, offset = 0){
  * @function getSongMenuDetail
  * @param {*} id 歌单的编号
  */
-export function getSongMenuDetail(id){
-  return myRequset.get('/playlist/detail/dynamic',{
+export function getSongMenuDetail(id) {
+  return myRequset.get('/playlist/detail', {
     id
   })
+}
+
+export function getSongMenuTag() {
+  return myRequest.get('/playlist/hot')
 }

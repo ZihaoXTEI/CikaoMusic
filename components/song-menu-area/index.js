@@ -1,10 +1,8 @@
 const app = getApp()
 
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
+    // 标题名称
     title: {
       type: String,
       value: '默认歌单'
@@ -14,22 +12,19 @@ Component({
       value: []
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-    screenWidth: app.globalData.screenWidth
+    screenWidth: 375
   },
-
-  /**
-   * 组件的方法列表
-   */
+  lifetimes: {
+    attached() {
+      this.setData({ screenWidth: app.globalData.screenWidth })
+    }
+  },
   methods: {
-    handleMenuItemClick(event) {
-      const item = event.currentTarget.dataset.item
+    // 点击事件
+    handleMenuMoreTap(){
       wx.navigateTo({
-        url: `pages/detail-song/index?id=${item.id}&type=menu`,
+        url: '/pages/detail-menu/index',
       })
     }
   }

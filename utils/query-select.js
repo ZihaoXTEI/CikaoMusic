@@ -1,4 +1,4 @@
-export default function (selector) {
+export default function querySelect (selector) {
   return new Promise((resolve) => {
     const query = wx.createSelectorQuery()
     query.select(selector).boundingClientRect()

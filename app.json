@@ -3,10 +3,13 @@
     "pages/home-music/index",
     "pages/home-video/index",
     "pages/detail-video/index",
-    "pages/detail-search/index"
+    "pages/detail-search/index",
+    "pages/detail-menu/index",
+    "pages/music-player/index",
+    "pages/detail-song/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "CikaoMusic",
     "navigationBarTextStyle": "black"

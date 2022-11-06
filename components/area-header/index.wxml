@@ -2,7 +2,7 @@
 <view class="header">
   <view class="title">{{title}}</view>
   <!-- 右侧区域 -->
-  <view class="right" wx:if="{{showRight}}" bindtap="handleRightClick">
+  <view class="right" wx:if="{{showRight}}" bindtap="handleRightTap">
     <view class="slot">
       <slot></slot>
     </view>

@@ -1,18 +1,11 @@
-// pages/home-video/index.js
 import { getTopMV } from '../../service/api_video'
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     topMVs: [],
     hasMore: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad(options) {
     this.getPageData(0)
   },
@@ -46,7 +39,7 @@ Page({
   },
 
   // 点击事件处理方法
-  handlerVideoItemClick(event){
+  handleVideoItemTap(event){
     const id = event.currentTarget.dataset.item.id
     
     // 页面跳转
@@ -64,5 +57,4 @@ Page({
   onReachBottom(){
     this.getPageData(this.data.topMVs.length)
   }
-
 })
