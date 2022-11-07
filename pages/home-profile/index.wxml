@@ -1,0 +1,44 @@
+<!-- 头像和名称 -->
+<view class="section user-info" bindtap="handleUserLoginTap">
+  <image class="avatar" src="{{isLogin? userInfo.avatarUrl : '/assets/images/profile/avatar.png'}}"></image>
+  <view class="nickname">{{isLogin ? userInfo.nickName : '未登录'}}</view>
+</view>
+
+<!-- <view class="section">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" mode="aspectFill" src="{{avatarUrl}}"></image>
+  </button>
+  <input type="nickname" class="weui-input" placeholder="请输入昵称" />
+</view> -->
+
+
+<!-- Tab 选项 -->
+<view class="section tab-list">
+  <block wx:for="{{tabList}}" wx:key="type">
+    <view class="item" bindtap="handleTabTap" data-item="{{item}}">
+      <image class="icon" src="/assets/images/profile/{{item.type}}.png"></image>
+      <text class="name">{{item.name}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="mine-menu">
+  <area-header title="我的歌单" showRight="{{false}}"></area-header>
+  <view class="section content">
+    <view class="header">
+      <view class="title">创建歌单</view>
+      <van-icon name="plus" bindtap="handlePlusTap"/>
+    </view>
+
+    <view class="list">
+      <block wx:for="{{playList}}" wx:key="listName">
+        <song-list-item item="{{item}}"></song-list-item>
+      </block>
+    </view>
+
+  </view>
+</view>
+
+<van-dialog class="dialog" use-slot  title="创建歌单" show="{{ showDialog }}" show-cancel-button bind:confirm="handleConfirmTap">
+  <input class="input" type="text" bindinput="handleInputChange" model:value="{{listName}}" placeholder="请输入歌单的名称" />
+</van-dialog>

@@ -37,6 +37,11 @@ const playerStore = new HYEventStore({
         const currentSong = res.songs[0]
         ctx.currentSong = currentSong
         ctx.durationTime = currentSong.dt
+
+        // 保存历史记录
+        const historyList = wx.getStorageSync('historyList') || []
+        historyList.push(currentSong)
+        wx.setStorageSync('historyList', historyList)
       })
       // 请求歌词数据
       getSongLyric(id).then(res => {

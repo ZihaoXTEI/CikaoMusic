@@ -1,0 +1,12 @@
+<!-- 自己创建歌单的 Item -->
+<view class="item" catchtap="handleListItemTap">
+  <image class="album" wx:if="{{item.songList[0]}}" src="{{item.songList[0].al.picUrl}}"></image>
+  <image class="album" wx:else src="/assets/images/profile/playlist.png"></image>
+
+  <view class="info">
+    <view class="name">{{item.listName}}</view>
+    <view class="count">{{item.songList.length}}首</view>
+  </view>
+
+  <van-icon class="icon" name="delete-o" catchtap="handleDeleteTap" />
+</view>

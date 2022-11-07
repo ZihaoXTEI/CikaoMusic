@@ -89,6 +89,13 @@ Page({
     })
   },
 
+  // 播放控制栏当前歌单列表点击事件
+  handleCurrentListTap() {
+    wx.navigateTo({
+      url: '/pages/detail-song/index?type=currentlist',
+    })
+  },
+
   // 获取图片高度
   handleSwiperImageLoaded() {
     throttleQueryRect('.swiper-image').then((res) => {

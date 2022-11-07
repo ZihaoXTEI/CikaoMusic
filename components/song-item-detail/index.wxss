@@ -37,3 +37,9 @@
 .info .source .dots {
   margin: 0 6rpx;
 }
+
+.more-icon{
+  margin-right: 20rpx;
+  font-size: 40rpx;
+  color: #999;
+}

@@ -54,6 +54,7 @@ Page({
     }
   }, 500, { leading: false, trailing: false }),
 
+  // 进度条改变事件
   handleSliderChange(event) {
     const value = event.detail.value
     const currentTime = value / 100 * this.data.durationTime
@@ -61,6 +62,7 @@ Page({
     this.setData({ sliderValue: value, currentTime, isSliderChanging: false })
   },
 
+  // 进度条正在改变事件
   handleSliderChanging(event) {
     const value = event.detail.value
     // 计算当前时间
@@ -77,7 +79,7 @@ Page({
     wx.navigateBack()
   },
 
-  // 歌曲控制
+  // 歌曲控制相关事件
   handlePrevBtnTap() {
     playerStore.dispatch('changeNewSongAction', false)
   },
@@ -94,6 +96,13 @@ Page({
 
   handlePlayOrPauseTap() {
     playerStore.dispatch('changePlayStatusAction')
+  },
+
+  // 当前歌单列表点击事件
+  handleCurrentListTap() {
+    wx.navigateTo({
+      url: '/pages/detail-song/index?type=currentlist',
+    })
   },
 
   // playerStore

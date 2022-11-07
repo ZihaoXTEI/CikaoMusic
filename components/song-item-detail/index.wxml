@@ -1,5 +1,5 @@
 <view class="song-item" bindtap="handleSongItemClick">
-<!-- 歌曲序号 -->
+  <!-- 歌曲序号 -->
   <view class="index">{{index}}</view>
 
   <!-- 歌曲信息 -->
@@ -14,4 +14,6 @@
       </text> -->
     </view>
   </view>
+
+  <van-icon class="more-icon" name="more-o" catchtap="handleMoreIconTap" />
 </view>

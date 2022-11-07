@@ -50,7 +50,7 @@
 
     <view class="right">
       <image class="icon play" src="/assets/images/music/{{isPlaying ? 'pause' : 'play'}}_icon.png" bindtap="handlePlayOrPauseTap"></image>
-      <image class="icon playlist" src="/assets/images/music/playlist_icon.png"></image>
+      <image class="icon playlist" src="/assets/images/music/playlist_icon.png" bindtap="handleCurrentListTap"></image>
     </view>
   </view>
 </view>

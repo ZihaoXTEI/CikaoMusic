@@ -1,0 +1,79 @@
+page {
+  box-sizing: border-box;
+  padding: 30rpx;
+  background-color: #f3f3f3;
+}
+
+.section {
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  margin-bottom: 30rpx;
+}
+
+/* 用户信息 */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info .avatar {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+.user-info .nickname {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+/* .section .avatar {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+} */
+
+/* Tab 选项 */
+.tab-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30rpx;
+}
+
+.tab-list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-list .item .icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.tab-list .item .name {
+  display: inline-block;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+
+/* 歌单 */
+.mine-menu .content .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #888;
+}
+
+/* 弹出框 */
+.dialog .input{
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 30rpx;
+  padding:0 16rpx;
+  border: 1px solid #eee;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+}

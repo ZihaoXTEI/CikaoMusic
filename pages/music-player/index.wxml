@@ -15,7 +15,7 @@
   </view>
 </nav-bar>
 
-<!-- 内容 -->
+<!-- 歌曲页面 -->
 <swiper style="height: {{contentHeight}}px;" bindchange="handleSwiperChange">
   <swiper-item class="music">
     <view class="album">
@@ -29,21 +29,23 @@
     <view class="progress">
       <slider class="slider" block-size="{{12}}" value="{{sliderValue}}" bindchange="handleSliderChange" bindchanging="handleSliderChanging">
       </slider>
-      <view class="item">
-        <view class="current">{{format.formatTime(currentTime)}}</view>
-        <view class="duration">{{format.formatTime(durationTime)}}</view>
+      <view class="time">
+        <view class="current">{{format.formatDuration(currentTime)}}</view>
+        <view class="duration">{{format.formatDuration(durationTime)}}</view>
       </view>
     </view>
 
+    <!-- 控制栏 -->
     <view class="operation">
       <image class="btn btn-mode" src="/assets/images/player/play_{{playModeName}}.png" bindtap="handleModeBtnTap"></image>
       <image class="btn btn-prev" src="/assets/images/player/play_prev.png" bindtap="handlePrevBtnTap"></image>
       <image class="btn btn-play" src="/assets/images/player/play_{{ isPlaying ? 'pause': 'resume' }}.png" bindtap="handlePlayOrPauseTap"></image>
       <image class="btn btn-next" src="/assets/images/player/play_next.png" bindtap="handleNextBtnTap"></image>
-      <image class="btn btn-music" src="/assets/images/player/play_music.png"></image>
+      <image class="btn btn-music" src="/assets/images/player/play_music.png" bindtap="handleCurrentListTap"></image>
     </view>
   </swiper-item>
 
+  <!-- 歌词页面 -->
   <swiper-item class="lyric">
     <scroll-view class="lyric-list" scroll-y scroll-top="{{lyricScrollTop}}" scroll-with-animation>
       <block wx:for="{{lyricList}}" wx:key="item">

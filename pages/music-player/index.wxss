@@ -88,7 +88,7 @@ page {
   padding: 0;
 }
 
-.music .progress .time {
+.music .progress .cc {
   display: flex;
   justify-content: space-between;
   font-size: 24rpx;
